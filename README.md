@@ -46,3 +46,66 @@ Advanced Predictive Analytics & Decision-Making:
 	Integration of Large Language Model (LLM) with Retrieval-Augmented Generation (RAG) framework for enhanced decision-making and access to a vast knowledge base of agricultural research and best practices.
 	Dynamic Irrigation Scheduling algorithm to generate optimized irrigation plans. 	Optimized Drone Flight Path generation based on AI predictions.
 
+
+# Bhu-Rakshak: A Smart Irrigation Solution
+
+## Overview
+Bhu-Rakshak is a smart irrigation framework developed for precision agriculture. It combines **IoT sensors**, **machine learning (LSTM-based models)**, and **autonomous decision-making** to optimize water usage in farming. The project addresses the challenge of water scarcity, soil degradation, and suboptimal crop yields by enabling data-driven irrigation control.
+
+This repository contains the code, model pipeline, and experimentation workflow used in the hackathon prototype.
+
+---
+
+## Features
+- **Soil & Climate Data Integration**  
+  Utilizes soil moisture sensors and meteorological data for real-time monitoring.
+
+- **Machine Learning Model (LSTM)**  
+  Predicts irrigation needs based on historical soil moisture and temperature data.
+
+- **Data Preprocessing & Scaling**  
+  Normalization, label encoding, and feature engineering for reliable model performance.
+
+- **Visualization Tools**  
+  Scatter plots and charts for soil moisture vs. temperature analysis with crop/irrigation status.
+
+- **Gradio Interface**  
+  Simple interactive UI to test predictions of irrigation requirements.
+
+- **Cloud & Deployment Ready**  
+  Designed for execution in Google Colab with GPU acceleration and Drive integration.
+
+---
+
+## Tech Stack
+- **Python**
+- **TensorFlow / Keras** (LSTM model)
+- **Scikit-learn**
+- **Pandas, NumPy**
+- **Matplotlib, Seaborn** (data visualization)
+- **Gradio** (web interface)
+- **Google Colab** (training environment)
+
+---
+
+## Repository Structure
+- `Water_Spklr3.ipynb` — Main notebook containing:
+  - Data preprocessing
+  - Model definition & training
+  - Visualization functions
+  - Evaluation metrics
+  - Gradio-based demo interface
+
+- `sprinkler_lstm_model.pkl` — Serialized trained model (to be saved/loaded for predictions).
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Python 3.8+
+- Google Colab / Jupyter Notebook
+- Required libraries:
+  ```bash
+  pip install tensorflow scikit-learn pandas numpy matplotlib seaborn gradio joblib
+
