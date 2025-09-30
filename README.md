@@ -34,7 +34,7 @@ USP
 	Sustainable & Economically Viable: Delivers significant environmental benefits (water conservation) alongside tangible economic returns for farmers.
 	Scalable and Future-Ready Platform: Designed as an "operating system" for precision agriculture, capable of integrating future innovations like pest and nutrient management.
 
-Solution Features: Data Acquisition & Analytics
+### Solution Features: Data Acquisition & Analytics
 
 Intelligent Data Acquisition:
 	Continuous monitoring of soil moisture levels using in-field capacitive and resistive sensors. 	Aggregation of real-time environmental data (temperature, humidity, precipitation).
@@ -109,3 +109,82 @@ This repository contains the code, model pipeline, and experimentation workflow 
   ```bash
   pip install tensorflow scikit-learn pandas numpy matplotlib seaborn gradio joblib
 
+
+Bhu_Rakshak/
+│
+├── app.py                 # Main entry point with Gradio UI
+├── model.py               # Model loading & prediction
+├── preprocess.py          # Data preprocessing helpers
+├── requirements.txt       # Dependencies
+└── README.md              # Documentation
+
+### model.py
+
+import joblib
+import numpy as np
+import tensorflow as tf
+
+MODEL_PATH = "sprinkler_lstm_model.pkl"
+
+def load_model():
+    try:
+        model = joblib.load(MODEL_PATH)
+        return model
+    except Exception as e:
+        raise RuntimeError(f"Error loading model: {e}")
+
+def predict_irrigation(model, features: np.ndarray):
+    """
+    features: numpy array shaped (1, n_features)
+    returns: irrigation status (string)
+    """
+    prediction = model.predict(features)
+    status = "Irrigation ON" if prediction[0] > 0.5 else "Irrigation OFF"
+    return status
+
+	## preprocess.py
+
+	
+import numpy as np
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler()
+
+def preprocess_input(soil_moisture: float, temperature: float):
+    """
+    Normalize input features before feeding into the model.
+    """
+    data = np.array([[soil_moisture, temperature]])
+    scaled = scaler.fit_transform(data)  # for MVP, fit on input directly
+    return scaled
+
+	## app.py
+
+	
+import gradio as gr
+from model import load_model, predict_irrigation
+from preprocess import preprocess_input
+
+# Load trained LSTM model
+model = load_model()
+
+def irrigation_predict(soil_moisture, temperature):
+    features = preprocess_input(soil_moisture, temperature)
+    result = predict_irrigation(model, features)
+    return result
+
+	### Gradio UI
+	
+demo = gr.Interface(
+    fn=irrigation_predict,
+    inputs=[
+        gr.Slider(0, 100, step=1, label="Soil Moisture (%)"),
+        gr.Slider(-10, 50, step=0.5, label="Temperature (°C)")
+    ],
+    outputs="text",
+    title="Bhu-Rakshak: Smart Irrigation MVP",
+    description="Enter soil moisture and temperature to predict irrigation status."
+)
+
+if __name__ == "__main__":
+    demo.launch()
