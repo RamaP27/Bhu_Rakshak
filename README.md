@@ -1,11 +1,15 @@
 
 <img width="3508" height="2480" alt="bhurak-shak-Symbol" src="https://github.com/user-attachments/assets/0cbada87-e30e-4cf0-91f8-b14f9b97d77d" />
 
-Bhu-Rakshak: A Smart Irrigation Solution
-The "Bhu-Rakshak" project proposes a pioneering smart irrigation framework that utilizes the Internet of Things (IoT), Artificial Intelligence (AI), and autonomous drone technology to revolutionize agricultural water management.
-The system aims to create a smart, autonomous, and data-driven ecosystem to ensure optimal resource utilization, enhance crop yield, and promote environmental sustainability. It addresses the challenge of inefficient water management in agriculture, which contributes to water scarcity, soil degradation, and suboptimal crop yields.
-Bhu-Rakshak collects real-time data from in-field soil sensors and meteorological sources, processes it through advanced predictive machine learning models, and executes precise, automated irrigation using a fleet of intelligent drones. This approach represents a paradigm shift towards precision agriculture, promising to significantly reduce water consumption, boost agricultural productivity, and enhance the resilience of food supply chains.
+<h1 style="color:olive;">Bhu-Rakshak: A Smart Irrigation Solution</h1>
 
+The **"Bhu-Rakshak"** project proposes a pioneering smart irrigation framework that utilizes the Internet of Things (IoT), Artificial Intelligence (AI), and autonomous drone technology to revolutionize agricultural water management.  
+
+The system aims to create a smart, autonomous, and data-driven ecosystem to ensure optimal resource utilization, enhance crop yield, and promote environmental sustainability. It addresses the challenge of inefficient water management in agriculture, which contributes to water scarcity, soil degradation, and suboptimal crop yields.  
+
+Bhu-Rakshak collects real-time data from in-field soil sensors and meteorological sources, processes it through advanced predictive machine learning models, and executes precise, automated irrigation using a fleet of intelligent drones. This approach represents a paradigm shift towards precision agriculture, promising to significantly reduce water consumption, boost agricultural productivity, and enhance the resilience of food supply chains. 
+
+<h1 style="color:olive;">Opportunities & Differentiation</h1>
 Opportunities & Differentiation
 
 Microservices
