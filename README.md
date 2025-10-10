@@ -53,6 +53,7 @@ Advanced Predictive Analytics & Decision-Making:
 Bhu-Rakshak is a smart irrigation framework developed for precision agriculture. It combines **IoT sensors**, **machine learning (LSTM-based models)**, and **autonomous decision-making** to optimize water usage in farming. The project addresses the challenge of water scarcity, soil degradation, and suboptimal crop yields by enabling data-driven irrigation control.
 
 This repository contains the code, model pipeline, and experimentation workflow used in the hackathon prototype.
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e4efa5ac-a467-408a-8ddd-1c242fa600ac" />
 
 ---
 
