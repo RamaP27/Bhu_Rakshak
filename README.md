@@ -45,8 +45,9 @@ Advanced Predictive Analytics & Decision-Making:
 	Sophisticated Machine Learning Engine utilizing Neural Network architectures like Long Short-Term Memory (LSTM) or Gated Recurrent Units (GRU) to forecast crop water needs.
 	Integration of Large Language Model (LLM) with Retrieval-Augmented Generation (RAG) framework for enhanced decision-making and access to a vast knowledge base of agricultural research and best practices.
 	Dynamic Irrigation Scheduling algorithm to generate optimized irrigation plans. 	Optimized Drone Flight Path generation based on AI predictions.
+<img width="1588" height="848" alt="image" src="https://github.com/user-attachments/assets/6dd7cb47-6980-4b4b-932b-117b57d898d9" />
 
-
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/ec944484-100d-4142-8ecb-4719a0dbb6b9" />
 # Bhu-Rakshak: A Smart Irrigation Solution
 
 ## Overview
